@@ -1,4 +1,7 @@
 # Beagle Bone Black
+É uma placa de desenvolvimento disponível que assim como o Raspberry, propõe a ser um computador de baixo custo, onde podemos rodar versões do Linux, como o Debian e Angstrom (uma distribuição linux para embarcados.)
+
+Para começar utilizá-la podemos utilizar apenas um cabo com conector mini USB, e é por meio desse cabo que será feita a alimentação do BeagleBone e também a comunicação com o computador.
 
  Este repositório tem o intuito de demonstrar o progresso de aprendizado na plataforma da beaglebone, algumas anotações e alguns códigos testes seram feitos e publicados aqui o diagrama citado em alguns dos scripts encontra-se abaixo e pode ser encontrado no site:
 
@@ -43,24 +46,22 @@ GPIO.cleanup()
 import Adafruit_BBIO.ADC as ADC
 ADC.setup()
 while true:
+# Utiliza-se 1.8 pois este é o valor máximo suportado pelos pinos de entrada analógica
     reading = ADC.read("P9_33") * 1.8
     print("Value is: ", reading)
-
 ```
 
 ```python
-# Exemplo de código para
-
+# Exemplo de código para trabalhar com Pulse with Modulation
+# Podemos simularr pulsos analógicos, com frequência, através destes pinos
 import Adafruit_BBIO.PWM as PWM
 
 PWM.start("P8_13",0, 1000)
 # Atribuindo o ciclo de trabalho após inicialização
-# Isto pode ser feita através do metódo set_duty_cycle
+# Isto pode ser feito através do metódo set_duty_cycle
 PWM.set_duty_cycle("P8_13",100)
 # Parando as configurações
 PWM.stop("P8_13")
 # Limpando as configurações
 PWM.cleanup()
-
-
 ```
