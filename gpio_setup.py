@@ -12,8 +12,8 @@ import Adafruit_BBIO.GPIO as GPIO
 # GPIO.setup("P9_12",OUT)
 # Devemos então setar a nossa configuração informando se o pino deverá atuar em nível lógico baixo (LOW/0) ou alto (HIGH/1)
 
-GPIO.output("P9_12",HIGH)
-GPIO.output("P9_12",LOW)
+GPIO.output("P9_12",GPIO.HIGH)
+GPIO.output("P9_12",GPIO.LOW)
 
 # Devemos então limpar os pinos configurados através do comando cleanup
  GPIO.cleanup()
