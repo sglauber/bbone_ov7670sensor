@@ -25,4 +25,4 @@ C - BBClip - https://github.com/sijpesteijn/BBCLib
 
 C++ - BlackLib - https://github.com/yigityuce/BlackLib
 
-[Made with love :heart: by @sglauber](https://github.com/sglauber)
+[Made with :heart: by @sglauber](https://github.com/sglauber)
