@@ -3,9 +3,11 @@
 
 Para começar utilizá-la podemos utilizar apenas um cabo com conector mini USB, e é por meio desse cabo que será feita a alimentação do BeagleBone e também a comunicação com o computador.
 
- Este repositório tem o intuito de demonstrar o progresso de aprendizado na plataforma da beaglebone, algumas anotações e alguns códigos testes seram feitos e publicados aqui o diagrama citado em alguns dos scripts encontra-se abaixo e pode ser encontrado no site:
+Este repositório tem o intuito de demonstrar o progresso de aprendizado na plataforma da beaglebone, além de me familiarizar com o git/github. Algumas anotações e códigos e testes serão feitos e publicados aqui, o diagrama citado nos códigos de teste está logo abaixo e também ser encontrado através do link abaixo:
 
-[TopTechBoy](http://www.toptechboy.com/beaglevone-black-rev-c/beaglebone-black-lesson-1-understanding-beaglebone-black-pinout/)
+[TopTechBoy - Acesso em 19 de agosto de 2018 às 07:45](http://www.toptechboy.com/beaglevone-black-rev-c/beaglebone-black-lesson-1-understanding-beaglebone-black-pinout/)
+
+Alguns scripts de exemplos estão disponíveis no repositório, eles contém uma breve explicação do que foi feito e das configurações utilizadas.
 
 Diagrama, pinagem da beagle bone black:
 
@@ -13,7 +15,7 @@ Diagrama, pinagem da beagle bone black:
 
 # Códigos e bibliotecas
 
-Abaixo alguns exemplos de códigos em python para serem testados com a beagle bone, podemos utilizar todas as linguagens nesta placa, basta importar as bibliotecas corretamente, links para algumas bibliotecas podem ser encontrados abaixo:
+Abaixo alguns exemplos de códigos em python para serem testados com a beagle bone. Qualquer linguagem pode ser utilizada com esta placa, basta importar as bibliotecas necessárias abaixo temos links para algumas bibliotecas:
 
 ## Bibliotecas
 
@@ -23,45 +25,4 @@ C - BBClip - https://github.com/sijpesteijn/BBCLib
 
 C++ - BlackLib - https://github.com/yigityuce/BlackLib
 
-## Códigos
-
-```python
-# Código para escritas digitais utilizanodo os pinos GPIO
-import Adafruit_BBIO.GPIO as GPIO
-
-# Configurando o pino 12 do HEADER P9 com saída
-GPIO.setup("P9_12",OUT)
-# Podemos atribuir níveis lógicos aos nossos pinos utilizando o método output através dos parâmetros (HIGH,LOW), também podemos utilizar (1 e 0)
-GPIO.output("P9_12",HIGH)
-GPIO.output("P9_12",LOW)
-# Limpando as configurações
-GPIO.cleanup()
-
-```
-
-
-```python
-# Exemplo de código para leitura de entradas analógica
-# Importando ADC - Analog to Digital Converter
-import Adafruit_BBIO.ADC as ADC
-ADC.setup()
-while true:
-# Utiliza-se 1.8 pois este é o valor máximo suportado pelos pinos de entrada analógica
-    reading = ADC.read("P9_33") * 1.8
-    print("Value is: ", reading)
-```
-
-```python
-# Exemplo de código para trabalhar com Pulse with Modulation
-# Podemos simularr pulsos analógicos, com frequência, através destes pinos
-import Adafruit_BBIO.PWM as PWM
-
-PWM.start("P8_13",0, 1000)
-# Atribuindo o ciclo de trabalho após inicialização
-# Isto pode ser feito através do metódo set_duty_cycle
-PWM.set_duty_cycle("P8_13",100)
-# Parando as configurações
-PWM.stop("P8_13")
-# Limpando as configurações
-PWM.cleanup()
-```
+[Made with love :heart: by @sglauber](https://github.com/sglauber)
