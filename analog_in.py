@@ -40,4 +40,4 @@ while 1:
     print("Value is: ", reading)
     sleep(0.5)
 
-    # Se estiver executando no terminal, pressione Ctrl + D para encerrar a execução.
+    # Se estiver executando no terminal, pressione Ctrl + D ou Ctrl + Z para encerrar a execução.

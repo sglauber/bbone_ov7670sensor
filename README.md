@@ -5,9 +5,7 @@ Para começar utilizá-la podemos utilizar apenas um cabo com conector mini USB,
 
 Este repositório tem o intuito de demonstrar o progresso de aprendizado na plataforma da beaglebone, além de me familiarizar com o git/github. Algumas anotações e códigos e testes serão feitos e publicados aqui, o diagrama citado nos códigos de teste está logo abaixo e também ser encontrado através do link abaixo:
 
-[TopTechBoy - Acesso em 19 de agosto de 2018 às 07:45](http://www.toptechboy.com/beaglevone-black-rev-c/beaglebone-black-lesson-1-understanding-beaglebone-black-pinout/)
-
-Alguns scripts de exemplos estão disponíveis no repositório, eles contém uma breve explicação do que foi feito e das configurações utilizadas.
+[TopTechBoy](http://www.toptechboy.com/beaglevone-black-rev-c/beaglebone-black-lesson-1-understanding-beaglebone-black-pinout/) - Acesso em 19 de agosto de 2018 às 07:45
 
 Diagrama, pinagem da beagle bone black:
 
@@ -15,7 +13,9 @@ Diagrama, pinagem da beagle bone black:
 
 # Códigos e bibliotecas
 
-Abaixo alguns exemplos de códigos em python para serem testados com a beagle bone. Qualquer linguagem pode ser utilizada com esta placa, basta importar as bibliotecas necessárias abaixo temos links para algumas bibliotecas:
+Alguns scripts de exemplos estão disponíveis no repositório, eles contém uma breve explicação do que foi feito e das configurações utilizadas.
+
+Qualquer linguagem pode ser utilizada com esta placa, basta importar as bibliotecas necessárias abaixo temos links para algumas bibliotecas:
 
 ## Bibliotecas
 
