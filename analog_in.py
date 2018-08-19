@@ -22,7 +22,7 @@ ADC.setup()
 
 from time import sleep
 
-while true:
+while 1:
 
     # Aqui iremos configurar a opção de leitura na entrada desejada, neste caso, o pino 33 no HEADER P9.
     # Utilizaremos também o pinos 32 P9_32 como nossa alimentação (pinos vermelhos) VDD.

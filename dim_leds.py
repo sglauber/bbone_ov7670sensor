@@ -20,9 +20,9 @@ for i in range(0,5):
 
 # Devemos ter certeza que o valor não irá ultrapassar 100%
 
-        if brilho_led1 > 100:
+        if ciclo_led1 > 100:
             ciclo_led1 = 100
-        if brilho_led2 > 100:
+        if ciclo_led2 > 100:
             ciclo_led2 = 100
 
 # Configurando o nosso ciclo de trabalho para os valores informados através do metódo set_duty_cycle()
