@@ -1,28 +1,19 @@
+# Usando os pinos GPIOS (General Purpose Input/Output ) nós vamos controlar a entrada e saída de dados da beagle bone
+# Neste exemplo vamos simular saídas digitais ou seja valores lógicos on-high/off-low (1/0)
+# A tensão aplicada na interface I/O vai de 0 (off-low) até 3.3V (on-high)
+# Os pinos que estão disponíveis com interface GPIO podem ser vistos no diagrama, na imagem anexada ao repositório.
+# Os pinos digitais são representados em verde no diagrama.
+# Neste exemplo os pinos foram configurado para utilizar o HEADER P9, pinos do lado esquerdo da placa, de acordo com o diagrama.
+# Para termos acesso a interface programável com python utilizaremos a biblioteca da Adafruit importando as configurações GPIO.
+
 import Adafruit_BBIO.GPIO as GPIO
 
-# Using GPIO we going to turn our GPIOs PINS ON/OFF using python
-# Here we're simulating digital outputs to our beagle bone
-# That mean HIGH (1) and LOW (0) binaries values.
-# Our voltage on the digital write go from 0V (low/off/0) to 3.3V (high/on/1)
+# Configurando os pinos que iremos utilizar, neste caso o pino P9_12 é configurado como pino de saída.
+# GPIO.setup("P9_12",OUT)
+# Devemos então setar a nossa configuração informando se o pino deverá atuar em nível lógico baixo (LOW/0) ou alto (HIGH/1)
 
-# We can do digital writes using the green GPIO pins (check the pinout diagram)
-# We'll be using the header to reference our PINS on this project
-# The headers are printed closer to the pins on the beagle bone
-
-
-# To work on a digital write we going to use pins on the left
-# Using the P9 header we going to use the P9_2 as our GND
-# And P9_12 as our GPIO pin
-# We may also set variable names to our PINS
-# As outPin = "P9_12"
-
-# Here we're setting our PIN 12 at header P9 as an output PIN.
-GPIO.setup("P9_12",OUT)
-# We may turn it on and off Using the output method
-# Saying that we going to write to the PIN and set it (on - > HIGH)
 GPIO.output("P9_12",HIGH)
-# In the same way we can turn it off using output method
 GPIO.output("P9_12",LOW)
 
-# Here we clean the settings that we just did to our PINS
-GPIO.cleanup()
+# Devemos então limpar os pinos configurados através do comando cleanup
+ GPIO.cleanup()
